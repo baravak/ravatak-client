@@ -1,4 +1,5 @@
 .post {
+    text-align: justify;
     position: relative;
     padding-bottom: 2rem;
 
@@ -45,6 +46,13 @@
     color: #444;
     margin-bottom: 2rem;
     text-shadow: 0 0 1px #afafaf;
+
+    blockquote {
+        color: #008bbf;
+        text-shadow: 0 0 1px #008bbf;
+        border-right: 4px solid #008bbf;
+        padding-right: 15px;
+    }
 }
 
 @media (min-width: 576px) {
