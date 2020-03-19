@@ -1,0 +1,14 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color: #fafafa;
+}
+
+body.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: Dana;
+}
