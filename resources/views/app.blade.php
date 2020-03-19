@@ -1,1 +1,1 @@
-@include('theme')
+@include($ajax ? 'xhr' : 'theme')
