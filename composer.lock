@@ -1213,7 +1213,7 @@
             "dist": {
                 "type": "path",
                 "url": "../dashboard-project/packages/majazeh/maravel-client",
-                "reference": "0b8408f2c79df5037ed1f21984816167fcb6454f"
+                "reference": "2f5443809d0063128e3880cfae29afba42874fe8"
             },
             "require": {
                 "davejamesmiller/laravel-breadcrumbs": "^5.2.1"
