@@ -4,7 +4,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <h1 class="mb-0">
-                        <a class="navbar-brand" href="#">زبان‌زد</a>
+                        <a class="navbar-brand" href="{{route('home')}}">زبان‌زد</a>
                         <small class="navbar-description d-none d-md-inline" data-xhr="sub-title">@yield('sub-title', 'مجموعه خرده روایت‌ها')</small>
                     </h1>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
