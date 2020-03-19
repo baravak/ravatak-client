@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ce3c74a80ffdb3a88c9ddd74397b63e",
+    "content-hash": "9ff2a26a1567e73d6a058cd460152463",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1213,7 +1213,7 @@
             "dist": {
                 "type": "path",
                 "url": "../dashboard-project/packages/majazeh/maravel-client",
-                "reference": "d9c441440e485e24d91c27d948a54c2025f10991"
+                "reference": "0b8408f2c79df5037ed1f21984816167fcb6454f"
             },
             "require": {
                 "davejamesmiller/laravel-breadcrumbs": "^5.2.1"

@@ -23,7 +23,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "majazeh/maravel-client": "dev-master"
+        "majazeh/maravel-client": "@dev"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
