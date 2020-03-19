@@ -67,5 +67,8 @@
             </div>
         </div>
     </main>
-
+    <footer class="py-5">
+        <div class="text-center text-secondary h5">زبان‌زد</div>
+        <div class="text-center text-secondary">مجموعه داستان‌های کوتاه</div>
+    </footer>
 @endsection

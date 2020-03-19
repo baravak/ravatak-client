@@ -1,4 +1,4 @@
-@include('layouts.head-styles')
+@include('app.head-styles')
 @include('layouts.head')
 
 @include('app.main')
