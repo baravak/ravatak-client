@@ -1,9 +1,9 @@
 @extends('app')
 @section('content')
 @isset($special)
-    <article class="post">
+    <article class="post" style="border-right: 4px solid #d85999;padding-right: 10px;">
         <h2 class="post-title">
-            <a class="text-info" href="{{route('termPost.index', $special->primary_term->title)}}">{{__($special->title)}}</a>
+            <a style="color:#d85999" href="{{route('termPost.index', $special->primary_term->title)}}">{{__($special->title)}}</a>
         </h2>
         <div class="post-content">
             <p>
