@@ -19,6 +19,7 @@ class HomeController extends Controller
     {
         $this->data->global->title = 'زبان‌زد | ' . $story->story_number . ' - ' . $story->title;
         $this->data->story = $story;
+        $this->data->global->description = \text2summary($story->content);
         return $this->view($request, 'show');
     }
 
