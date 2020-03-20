@@ -24,4 +24,9 @@ class HomeController extends Controller
         $this->data->story = $story;
         return $this->view($request, 'show');
     }
+
+    public function aboutUs(Request $request)
+    {
+        return $this->view($request, 'aboutUs');
+    }
 }
