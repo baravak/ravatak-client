@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Story;
+use App\Post;
 
 class HomeController extends Controller
 {
     public function index(Request $request)
     {
+        $this->data->special = Post::apiShow('P966666U');
         $this->data->stories = Story::apiIndex($request->all(['order', 'sort', 'status', 'page']));
         return $this->view($request, 'home');
     }
