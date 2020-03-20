@@ -38,6 +38,9 @@
                     </tbody>
                 </table>
             </div>
+            <div class="d-flex justify-content-center">
+                {{$stories->render()}}
+            </div>
         </div>
     </div>
 @endsection
