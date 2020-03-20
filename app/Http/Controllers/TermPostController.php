@@ -32,4 +32,14 @@ class TermPostController extends Controller
         $this->data->posts = Post::apiIndex($data);
         return $this->view($request, 'terms.index');
     }
+
+    public function show(Request $request, $term, Post $post)
+    {
+        $data['title'] = $term;
+        $data['parent_id'] = 'T966663';
+        $this->data->term = (new Term)->execute('%s/find', $data);
+        $this->data->terms = Term::apiIndex(['parent' => $this->data->term->id]);
+        $this->data->post = $post;
+        return $this->view($request, 'terms.show');
+    }
 }
