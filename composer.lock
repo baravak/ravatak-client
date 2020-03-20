@@ -1273,9 +1273,10 @@
             "dist": {
                 "type": "path",
                 "url": "../dashboard-project/packages/majazeh/maravel-client",
-                "reference": "2f5443809d0063128e3880cfae29afba42874fe8"
+                "reference": "fc06dbc6307c394662ce6389e28a2a45ae9b40fe"
             },
             "require": {
+                "cebe/markdown": "^1.2",
                 "davejamesmiller/laravel-breadcrumbs": "^5.2.1"
             },
             "type": "laravel package",
@@ -1292,7 +1293,10 @@
                 "psr-4": {
                     "App\\": "src/app/",
                     "Maravel\\": "src/"
-                }
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
             },
             "license": [
                 "MIT"
