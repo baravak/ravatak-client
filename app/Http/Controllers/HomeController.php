@@ -17,7 +17,6 @@ class HomeController extends Controller
 
     public function show(Request $request, Story $story)
     {
-        dd($request->header());
         $this->data->global->title = 'زبان‌زد | ' . $story->story_number . ' - ' . $story->title;
         $this->data->story = $story;
         return $this->view($request, 'show');
