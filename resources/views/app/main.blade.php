@@ -17,7 +17,7 @@
                                 <a class="nav-link" href="{{config('app.url')}}">صفحه نخست <span class="sr-only">(فعلی)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('termPost.index', 'COVID19')}}">ویژه کرونا</a>
+                                <a class="nav-link font-weight-bold" class="color: #a35ad8;" href="{{route('termPost.index', 'COVID19')}}">ویژه کرونا</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/about-us">درباره ما</a>
