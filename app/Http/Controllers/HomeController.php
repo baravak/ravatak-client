@@ -10,6 +10,9 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
+        // $parser = new \cebe\markdown\Markdown();
+        // $x = $parser->parse('### Hi');
+        // dd($x);
         $this->data->special = Post::apiShow('P966666U');
         $this->data->stories = Story::apiIndex($request->all(['order', 'sort', 'status', 'page']));
         return $this->view($request, 'home');

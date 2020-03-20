@@ -7,7 +7,7 @@
         </h2>
         <div class="post-content">
             <p>
-                {!!str_replace('<br />', "</p>\n<p>", nl2br($special->content))!!}
+                @markdown($special->content)
             </p>
             <a href="{{route('termPost.index', $special->primary_term->title)}}"> برای ورود به {{$special->title}} کلیک کنید</a>
         </div>
@@ -46,10 +46,10 @@
             </h2>
             <div class="post-content">
                 <p>
-                    {!!str_replace('<br />', "</p>\n<p>", nl2br($story->content))!!}
+                    @markdown($story->content)
                 </p>
                 <blockquote>
-                <p>{{$story->summary}}</p>
+                    @markdown($story->summary)
                 </blockquote>
             </div>
         </article>

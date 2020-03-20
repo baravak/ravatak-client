@@ -15,7 +15,7 @@
             </h2>
             <div class="post-content">
                 <p>
-                    {{$post->content}}
+                    @markdown($post->content)
                 </p>
             </div>
         </article>
