@@ -9,7 +9,7 @@ class StoryController extends Controller
 {
     public function index(Request $request)
     {
-        $this->data->stories = Story::apiIndex($request->all(['order', 'sort', 'status']));
+        $this->data->stories = Story::apiIndex($request->all(['order', 'sort', 'status', 'page']));
         return $this->view($request, 'dashboard.stories.index');
     }
 

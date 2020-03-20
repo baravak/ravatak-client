@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index(Request $request)
     {
-        $this->data->posts = Post::apiIndex($request->all(['order', 'sort', 'status']));
+        $this->data->posts = Post::apiIndex($request->all(['order', 'sort', 'status', 'page']));
         return $this->view($request, 'dashboard.posts.index');
     }
 
