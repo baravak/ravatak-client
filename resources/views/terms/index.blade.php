@@ -8,6 +8,9 @@
     <a href="{{route('termPost.subIndex', ['term' => $term->title, 'subTerm' => $item->id])}}" class="badge align-middle badge-secondary">{{$item->title}}</a>
     @endforeach
 </div>
+    @if (!$posts->count())
+        سرفصل <strong>{{$subTerm->title}}</strong> هنوز مطلب منتشرشده‌ای ندارد...!
+    @endif
     @foreach ($posts as $post)
         <article class="post">
             <h2 class="post-title">
