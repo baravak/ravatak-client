@@ -9,7 +9,10 @@
     @endforeach
 </div>
     @if (!$posts->count())
+    @isset($subTerm)
         سرفصل <strong>{{$subTerm->title}}</strong> هنوز مطلب منتشرشده‌ای ندارد...!
+    @endisset
+        ویژه‌نامه <strong>{{__($term->title)}}</strong> هنوز مطلب منتشرشده‌ای ندارد...!
     @endif
     @foreach ($posts as $post)
         <article class="post">
