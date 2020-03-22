@@ -33,8 +33,11 @@ class TermPostController extends Controller
         return $this->view($request, 'terms.index');
     }
 
-    public function show(Request $request, $term, Post $post)
+    public function show(Request $request, $term, Post $post, $title = null)
     {
+        if ($title && snake_url($post->title) != $title) {
+            return redirect()->route('termPost.show', ['term' => $term, 'post' => $post->id, 'title' => snake_url($post->title)]);
+        }
         $data['title'] = $term;
         $data['parent_id'] = 'T966663';
         $this->data->term = (new Term)->execute('%s/find', $data);

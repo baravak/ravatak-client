@@ -21,7 +21,7 @@ class HomeController extends Controller
         $this->data->story = $story;
         if($title && snake_url($story->title) != $title)
         {
-            return redirect()->route('stories.showTitle', ['story' => $story->id, 'title' => snake_url($story->title)]);
+            return redirect()->route('stories.show', ['story' => $story->id, 'title' => snake_url($story->title)]);
         }
         $this->data->global->description = \text2summary($story->content);
         return $this->view($request, 'show');
