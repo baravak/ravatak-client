@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/story/{story}', 'HomeController@show')->name('stories.show');
+Route::get('/story/{story}/{title}', 'HomeController@show')->name('stories.showTitle');
 Route::get('+/{term}/{subTerm?}', 'TermPostController@index')->name('termPost.index')->where(['subTerm' => 'term=[^=\/]+']);
 Route::get('+/{term}/term={subTerm}', 'TermPostController@index')->name('termPost.subIndex');
 
