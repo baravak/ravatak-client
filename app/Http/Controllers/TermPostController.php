@@ -19,7 +19,7 @@ class TermPostController extends Controller
         $term = $this->data->term;
         if($subTerm)
         {
-            $this->data->subTerm = Term::apiShow(substr($subTerm, 5));
+            $this->data->subTerm = Term::apiShow($subTerm);
             $term = $this->data->subTerm;
         }
 
