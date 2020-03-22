@@ -7,17 +7,7 @@ use App\User;
 use Closure;
 class Authenticate extends Middleware
 {
-    /**
-     * Get the path the user should be redirected to when they are not authenticated.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return string|null
-     */
-    public function handle($request, Closure $next, $guard = null)
-    {
-        User::$token = $request->cookie('token');
-        return parent::handle($request, $next, $guard);
-    }
+
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
