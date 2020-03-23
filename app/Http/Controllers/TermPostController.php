@@ -17,18 +17,21 @@ class TermPostController extends Controller
         $this->data->term = (new Term)->execute('%s/find', $data);
         $this->data->terms = Term::apiIndex(['parent' => $this->data->term->id]);
         $term = $this->data->term;
-        if($subTerm)
+        $data = $request->all(['page']);
+        $data['order'] = 'id';
+        $data['sort'] = 'ASC';
+        if ($subTerm)
         {
             $this->data->subTerm = Term::apiShow($subTerm);
             $term = $this->data->subTerm;
+            $this->data->subTerms = Term::apiIndex(['parent' => $subTerm]);
+            $data['term'] = $term->id;
         }
-
-        $data = $request->all(['order', 'sort', 'status']);
+        else
+        {
+            $data['primary_term'] = $term->id;
+        }
         $this->data->global->title = 'زبان‌زد | ویژه‌نامه ' . __($this->data->term->title);
-        $data['primary_term'] = $term->id;
-        $data['order'] = 'id';
-        $data['sort'] = 'ASC';
-
         $this->data->posts = Post::apiIndex($data);
         return $this->view($request, 'terms.index');
     }
